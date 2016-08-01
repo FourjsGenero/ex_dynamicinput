@@ -1,0 +1,17 @@
+LAYOUT (TEXT="Dynamic Input Form Example Parameters")
+GRID
+{
+Number of Fields   [f01   ]
+Number of Columns  [f02   ]
+Pages              [f03   ] 
+Size               [f04   ]
+[b01                      ]
+}
+END
+END
+ATTRIBUTES
+SPINEDIT f01 = formonly.field_count, VALUEMIN =1;
+SPINEDIT f02 = formonly.column_count, VALUEMIN = 1;
+CHECKBOX f03 = formonly.page_mode, VALUEUNCHECKED=FALSE, VALUECHECKED=TRUE, NOT NULL;
+SPINEDIT f04 = formonly.page_size, VALUEMIN=1;
+BUTTON b01: run, TEXT="Run";
